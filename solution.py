@@ -8,5 +8,5 @@ chat_id = 881258336 # Ваш chat ID, не меняйте название пе�
 
 def solution(p: float, x: np.array) -> tuple:
     n = len(x)
-    return np.sqrt(sum(x**2)/ (9*chi2.ppf((1+p)/2, size = 2*n))), \
-    np.sqrt(sum(x**2)/ (9*chi2.ppf((1 - p) / 2, size = 2*n )))
+    return np.sqrt(sum(x**2)/ (9*chi2.ppf((1+p)/2, df = 2*n))), \
+    np.sqrt(sum(x**2)/ (9*chi2.ppf((1 - p) / 2, df = 2*n )))
